@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmployeeCrudApp</title>
+
+
+</head>
+
+<body>
+
+    <script>
+        let ida = document.getElementById("empid")
+        let ename = document.getElementById("empname");
+        function insert1() {
+            //  alert();
+
+
+            let parent1 = document.querySelector("#empid");
+            let check1 = parent1.value;
+
+            let parent2 = document.querySelector("#empname");
+            let check2 = parent2.value;
+
+            if ((check1 === "")) {
+                document.getElementById("responseText").innerHTML = "Employee id is required";
+
+                return;
+            }
+            if ((check2 === "")) {
+                document.getElementById("responseText").innerHTML = "Employee name is required";
+
+                return;
+            }
+
+            document.getElementById("responseText").innerHTML = "Values are inserted ";
+
+
+        };
+        function select1() {
+
+            let parent1 = document.querySelector("#empid");
+            let check1 = parent1.value;
+
+            let parent2 = document.querySelector("#empname");
+            let check2 = parent2.value;
+
+            if ((check1 === "")) {
+                document.getElementById("responseText").innerHTML = "Employee id is required";
+
+                return;
+            }
+            if ((check2 === "")) {
+                document.getElementById("responseText").innerHTML = "Employee name is required";
+
+                return;
+            }
+
+            document.getElementById("responseText").innerHTML = "Values are Selected";
+
+
+        };
+        function deleteval() {
+
+            let parent1 = document.querySelector("#empid");
+            let check1 = parent1.value;
+
+            let parent2 = document.querySelector("#empname");
+            let check2 = parent2.value;
+
+            if ((check1 === "")) {
+                document.getElementById("responseText").innerHTML = "Employee id is required";
+
+                return;
+            }
+            if ((check2 === "")) {
+                document.getElementById("responseText").innerHTML = "Employee name is required";
+
+                return;
+            }
+            document.getElementById("responseText").innerHTML = "Values are successfully deleted";
+        };
+        function updateval() {
+
+            let parent1 = document.querySelector("#empid");
+            let check1 = parent1.value;
+
+            let parent2 = document.querySelector("#empname");
+            let check2 = parent2.value;
+
+            if ((check1 === "")) {
+                document.getElementById("responseText").innerHTML = "Employee id is required";
+
+                return;
+            }
+            if ((check2 === "")) {
+                document.getElementById("responseText").innerHTML = "Employee name is required";
+
+                return;
+            }
+
+
+            document.getElementById("responseText").innerHTML = "Values are updated";
+        };
+        function clear() {
+            document.getElementById("responseText").innerHTML = "Values are selected";
+        };
+
+
+    </script>
+    <h1>A Simple Employee CRUD Application</h1>
+
+    <label for="">Employee ID:</label>
+    <input id="empid" type="text" name="Employee ID"> <br><br>
+    <label for="">Employee Name</label>
+    <input id="empname" type="text" name="Employee Name"> <br><br>
+    <label for="">Gender:</label>
+    <label for="">
+        <input type="radio" required>Male
+        <input type="radio" required>Female
+        <input type="radio" required>Others
+    </label> <br>
+    <label for="">Salary:</label>
+    <input type="text">
+    <br>
+    <button id="Insert" type="button" onclick="insert1()">Insert</button>
+    <button id="select" type="button" onclick="select1()">Select</button>
+    <button id="update" type="button" onclick="updateval()">Update</button>
+    <button id="delete" type="button" onclick="deleteval()">Delete</button> <br>
+    <button id="clear" type="button" onclick="clear()">Clear Form</button>
+    <div id="responseText"></div>
+</body>
+
+</html>
